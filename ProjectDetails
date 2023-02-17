@@ -1,0 +1,56 @@
+API which we are gonna use :-
+
+1>A single coin API.
+2>A coin list API.
+3>A historical chart displaying API.
+4>API for displaying some trending Coins.
+
+Package Installations :-
+
+npm install @material-ui/core
+npm install @material-ui/lab
+npm install react-router-dom
+npm i axios 
+npm i react-html-parser removed this library for parsing the description in CoinPage .
+npm i html-react-parser instead of above library used this one .
+
+Issue faced in CoinInfo page that is when fetch the desription property from the API  encountered a issue that , it is containing anchor tag inside the desription So I have make use of a package i.e react-html-parser package which will parse the description & display the proper description in normal text.
+
+When console the historicalData we have the below info :-
+ Array(2)
+ 0: 1655621929529       - Date
+ 1: 1428342.3812883596  - Price on the particular date.
+
+Read about Date Object in JavaScript.
+
+
+<!-- <Line
+ data={{
+  labels: historicData.map((coin) => {
+    let date = new Date(coin[0]);
+    let time =
+      date.getHours() > 12
+        ? `${date.getHours() - 12}:${date.getMinutes()} PM`
+        : `${date.getHours()}:${date.getMinutes()} AM`;
+    return days === 1 ? time : date.toLocaleDateString();
+  }),
+
+  datasets: [
+    {
+      data: historicData.map((coin) => coin[1]),
+      label: `Price ( Past ${days} Days ) in ${currency}`,
+      borderColor: "#EEBC1D",
+    },
+  ],
+}}
+options={{
+  elements: {
+    point: {
+      radius: 1,
+    },
+  },
+}}
+/>
+ -->
+
+ SAURab19@719%$
